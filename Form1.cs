@@ -30,12 +30,17 @@ namespace CalculadoradeRendimentos
             {
                 valorFinal = valorFinal + (valorFinal * taxa);
             }
-
-
+            
+            // textBox4.Text = valorFinal.ToString("F2");
             string[] vf = Convert.ToString(valorFinal).Split(',');
             textBox4.Text = $"{vf[0]},{vf[1].Substring(0, 2)}";
 
-            // textBox4.Text = valorFinal.ToString("F2");
+            
+
+            decimal lucroReal = valorFinal - aporte;
+            // textBox5.Text = lucroReal.ToString("F2");
+            string[] lr = Convert.ToString(lucroReal).Split(',');
+            textBox5.Text = $"{lr[0]},{lr[1].Substring(0, 2)}";
         }
     }
 }
